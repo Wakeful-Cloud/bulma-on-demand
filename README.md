@@ -40,7 +40,3 @@ Name | Required/Default | Description
 ```bash
 npm run dev
 ```
-3. Deploy:
-```bash
-npm run deploy
-```
