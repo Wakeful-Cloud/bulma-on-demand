@@ -1,0 +1,85 @@
+{
+  "env": {
+    "browser": true,
+		"node": true
+	},
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+		"plugin:@typescript-eslint/strict"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.svelte"
+      ],
+      "processor": "svelte3/svelte3"
+    }
+  ],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaVersion": "latest",
+		"extraFileExtensions": [
+			".svelte"
+		],
+		"project": [
+			"tsconfig.json"
+		],
+		"sourceType": "module"
+	},
+	"plugins": [
+		"@typescript-eslint",
+		"redos",
+		"svelte3"
+	],
+	"rules": {
+		"@typescript-eslint/ban-types": [
+			"error",
+			{
+				"types": {
+					"{}": false
+				}
+			}
+		],
+		"@typescript-eslint/consistent-type-definitions": "off",
+		"@typescript-eslint/no-explicit-any": "off",
+		"@typescript-eslint/no-non-null-assertion": "off",
+		"@typescript-eslint/no-this-alias": "off",
+		"@typescript-eslint/no-unnecessary-condition": "off",
+		"@typescript-eslint/non-nullable-type-assertion-style": "off",
+		"arrow-parens": [
+			"warn",
+			"as-needed"
+		],
+		"brace-style": [
+			"warn",
+			"allman"
+		],
+		"camelcase": [
+			"warn",
+			{
+				"properties": "always"
+			}
+		],
+		"curly": "warn",
+		"no-async-promise-executor": "off",
+		"no-extra-semi": "error",
+		"no-var": "error",
+		"object-curly-spacing": "warn",
+		"prefer-const": "warn",
+		"redos/no-vulnerable": "error",
+		"semi": "error",
+		"quotes": [
+			"warn",
+			"single"
+		],
+		"quote-props": [
+			"warn",
+			"consistent-as-needed"
+		],
+		"space-in-parens": "warn"
+	},
+  "settings": {
+    "svelte3/typescript": true
+  }
+}

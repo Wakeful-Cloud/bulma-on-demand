@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="4653"
+   height="512"
+   viewBox="0 0 436.21875 48"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="logo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="0.16"
+     inkscape:cx="2253.125"
+     inkscape:cy="-678.125"
+     inkscape:window-width="1920"
+     inkscape:window-height="984"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5" />
+  <defs
+     id="defs2">
+    <rect
+       x="548.01788"
+       y="75.584656"
+       width="4310.5889"
+       height="601.9317"
+       id="rect1342" />
+    <rect
+       x="513.69543"
+       y="-399.54092"
+       width="1486.3669"
+       height="354.56277"
+       id="rect1330" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline">
+    <text
+       xml:space="preserve"
+       transform="matrix(0.09375,0,0,0.09375,-3.7336493,-10.547912)"
+       id="text1340"
+       style="font-style:normal;font-weight:normal;font-size:517.333px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect1342);display:inline;fill:#ff0000;fill-opacity:1;stroke:none"
+       inkscape:label="Text"><tspan
+         x="548.01758"
+         y="560.58368"
+         id="tspan1461"><tspan
+           dx="0 0 0 0 0 0 0 0 0.00012207031 0 0 0 0 0.00012207031 -0.00012207031"
+           style="font-weight:bold;font-family:Dosis;-inkscape-font-specification:'Dosis Bold';fill:#000000"
+           id="tspan1459">BULMA ON DEMAND</tspan></tspan></text>
+    <path
+       fill-rule="evenodd"
+       clip-rule="evenodd"
+       d="m -3.94e-5,33.262368 3,-21 12.0000254,-11.9999997 15,14.9999997 -9,9 12,12 -18,12.000001 z"
+       fill="#00d1b2"
+       id="path715-3"
+       style="display:inline;stroke-width:1.2"
+       inkscape:label="Icon" />
+  </g>
+</svg>

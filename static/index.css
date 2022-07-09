@@ -1,0 +1,32 @@
+:root {
+  overflow: auto;
+}
+
+:root,
+body {
+  min-height: 100vh;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.scroll {
+  overflow: auto;
+}
+
+@media (prefers-color-scheme: dark) {
+  .only-light {
+    display: none;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .only-dark {
+    display: none;
+  }
+}
