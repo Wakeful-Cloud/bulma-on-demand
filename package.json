@@ -1,6 +1,6 @@
 {
   "name": "bulma-on-demand",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "author": "Wakeful Cloud",
   "license": "MIT",
@@ -16,7 +16,7 @@
     "lodash-es": "^4.17.21",
     "lru-cache": "^7.12.0",
     "node-object-hash": "^2.3.10",
-    "vm2": "^3.9.10",
+    "sass-embedded": "^1.53.0",
     "yup": "^1.0.0-beta.4"
   },
   "devDependencies": {
@@ -36,7 +36,6 @@
     "got": "^12.1.0",
     "jszip": "^3.10.0",
     "lucide-svelte": "^0.73.0",
-    "sass": "^1.53.0",
     "svelte": "^3.49.0",
     "svelte-check": "^2.8.0",
     "svelte-preprocess": "^4.10.7",

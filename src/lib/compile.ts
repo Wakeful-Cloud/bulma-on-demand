@@ -6,33 +6,9 @@
 import Cache from 'lru-cache';
 import Hasher from 'node-object-hash';
 import files from './files';
-import script from './script';
-import type {CompileResult, OutputStyle} from 'sass';
 import type {Version} from './variables';
-import {NodeVM} from 'vm2';
-
-/**
- * VM sandbox
- */
-interface VMSandbox
-{
-  /**
-   * Source files
-   * * Key: file path
-   * * Value: file content
-   */
-  files: Map<string, string>;
-
-  /**
-   * Source code
-   */
-  source: string;
-
-  /**
-   * Output style
-   */
-  style: OutputStyle;
-}
+import {compileString} from 'sass-embedded';
+import {extname, format, join, parse} from 'path/posix';
 
 //Cache
 const CACHE_MAX = process.env.CACHE_MAX != null ? parseInt(process.env.CACHE_MAX, 10) : 2560;
@@ -81,43 +57,96 @@ ${Object.entries(variables).map(([key, value]) => `$${key}: ${value}`).join('\r\
 
 @import "bulma.sass"`;
 
-    //Initialize the VM
-    const vm = new NodeVM({
-      allowAsync: false,
-      eval: true,
-      require: {
-        builtin: [
-          'path/posix',
-          'url',
-          'util'
-        ],
-        context: 'sandbox',
-        external: {
-          modules: [
-            'immutable',
-            'sass'
-          ],
-          transitive: false
+    //Get the release files
+    const releaseFiles = files[version];
+
+    //Compile the SASS
+    const result = compileString(source, {
+      alertAscii: true,
+      alertColor: false,
+      //See https://sass-lang.com/documentation/js-api/interfaces/Importer
+      importer: {
+        canonicalize: url =>
+        {
+          //Convert the URL to a path (fileURLToPath doesn't support POSIX paths on Windows)
+          const path = new URL(url).pathname;
+
+          //Parse the path
+          const parsed = parse(path);
+
+          //Generate candidates
+          const candidates = parsed.ext == '' ? [
+            format({
+              ...parsed,
+              base: `${parsed.name}.sass`
+            }),
+            format({
+              ...parsed,
+              base: `${parsed.name}.scss`
+            }),
+            format({
+              ...parsed,
+              base: `_${parsed.name}.sass`
+            }),
+            format({
+              ...parsed,
+              base: `_${parsed.name}.scss`
+            }),
+
+            join(path, 'index.sass'),
+            join(path, 'index.scss'),
+            join(path, '_index.sass'),
+            join(path, '_index.scss')
+          ] : [
+            path,
+            format({
+              ...parsed,
+              base: `_${parsed.base}`
+            }),
+          ];
+
+          //Evaluate candidates
+          for (const candidate of candidates)
+          {
+            if (releaseFiles[candidate as keyof typeof releaseFiles] != null)
+            {
+              //pathToFileURL doesn't support POSIX paths on Windows
+              return new URL(candidate, 'file:///');
+            }
+          }
+
+          throw new Error(`Invalid import URL ${url}!`);
         },
-        mock: {
-          fs: {}
+        load: url =>
+        {
+          //Convert the URL to a path
+          const path = url.pathname;
+
+          //Get the file
+          const contents = releaseFiles[path as keyof typeof releaseFiles];
+
+          if (contents == null)
+          {
+            return null;
+          }
+
+          //Get the extension
+          const extension = extname(path);
+
+          return {
+            contents: contents,
+            syntax: extension == '.sass' ? 'indented' : 'scss'
+          };
         }
       },
-      sandbox: {
-        source,
-        style: minify ? 'compressed' : 'expanded'
-      } as VMSandbox,
-      wasm: false,
-      wrapper: 'none'
+      style: minify ? 'compressed' : 'expanded',
+      syntax: 'indented',
+      url: new URL('file:///')
     });
-    vm.freeze(files[version], 'files');
-
-    //Run the SASS compiler in the VM
-    const result = vm.run(script) as CompileResult | undefined;
 
     //Get the CSS
     const css = result?.css;
-    if (typeof css != 'string' || css.length > (1 << 20))
+    if (css.length > (1 << 20))
     {
       throw new Error('Failed to compile Bulma! (Result is unexpected)');
     }

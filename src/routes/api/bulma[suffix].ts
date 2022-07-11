@@ -4,7 +4,7 @@
 
 //Imports
 import compile from '$lib/compile';
-import sass from 'sass';
+import sass from 'sass-embedded';
 import type {RequestHandler, RequestHandlerOutput} from '@sveltejs/kit';
 import {type ObjectSchema, ValidationError, object, string} from 'yup';
 import {variables, versions, type Version} from '$lib/variables';

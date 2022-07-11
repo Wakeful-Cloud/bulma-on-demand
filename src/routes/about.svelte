@@ -1,38 +1,36 @@
 <script lang="ts">
   //Imports
-  import getIntegrity from '$lib/integrity';
+  import getIntegrity from "$lib/integrity";
 
   //State
   const suggestedVariables = {
-    'scheme-main': 'hsl(0, 0%, 10%)',
-    'scheme-main-bis': 'hsl(0, 0%, 13%)',
-    'scheme-main-ter': 'hsl(0, 0%, 20%)',
-    'scheme-invert': 'hsl(0, 0%, 100%)',
-    'scheme-invert-bis': 'hsl(0, 0%, 98%)',
-    'scheme-invert-ter': 'hsl(0, 0%, 96%)',
-    'background': 'hsl(0, 0%, 14%)',
-    'text': 'hsl(0, 0%, 71%)',
-    'text-strong': 'hsl(0, 0%, 79%)',
-    'shadow':
-      '0 0.5em 1em -0.125em rgba(hsl(0, 0%, 10%), 0.1), 0 0px 0 1px rgba(hsl(0, 0%, 10%), 0.02)',
+    "scheme-main": "hsl(0, 0%, 10%)",
+    "scheme-main-bis": "hsl(0, 0%, 13%)",
+    "scheme-main-ter": "hsl(0, 0%, 20%)",
+    "scheme-invert": "hsl(0, 0%, 100%)",
+    "scheme-invert-bis": "hsl(0, 0%, 98%)",
+    "scheme-invert-ter": "hsl(0, 0%, 96%)",
+    background: "hsl(0, 0%, 14%)",
+    text: "hsl(0, 0%, 71%)",
+    "text-strong": "hsl(0, 0%, 79%)",
+    shadow:
+      "0 0.5em 1em -0.125em rgba(hsl(0, 0%, 10%), 0.1), 0 0px 0 1px rgba(hsl(0, 0%, 10%), 0.02)",
   };
 
   const base =
-    typeof window != 'undefined' ? window.location.origin : 'invalid://error';
-  const lightUrl = new URL('/api/bulma-0.9.4.min.css', base);
-  const darkUrl = new URL('/api/bulma-0.9.4.min.css', base);
+    typeof window != "undefined" ? window.location.origin : "invalid://error";
+  const lightUrl = new URL("/api/bulma-0.9.4.min.css", base);
+  const darkUrl = new URL("/api/bulma-0.9.4.min.css", base);
   darkUrl.search = new URLSearchParams(suggestedVariables).toString();
 
-  let snippet = '';
+  let snippet = "";
 
-  (async () => 
-  {
+  (async () => {
     //Skip if SSR
     if (
-      lightUrl.protocol.startsWith('invalid') ||
-      darkUrl.protocol.startsWith('invalid')
-    ) 
-  {
+      lightUrl.protocol.startsWith("invalid") ||
+      darkUrl.protocol.startsWith("invalid")
+    ) {
       return;
     }
 
@@ -86,13 +84,7 @@
       target="_blank"
       rel="noreferer nofollow">subresource integrity hashes</a
     >
-    to prevent tampering with the style sheets. Furthermore, Bulma On Demand runs
-    the SASS compiler inside of a
-    <a
-      href="https://github.com/patriksimek/vm2"
-      target="_blank"
-      rel="noreferer nofollow">VM2 Sandbox</a
-    > in the event of a vulnerability in SASS.
+    to prevent tampering with the style sheets.
   </p>
 
   <h2 class="is-size-4">Does Bulma On Demand support dark mode?</h2>
