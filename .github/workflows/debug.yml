@@ -1,0 +1,20 @@
+name: Debug
+
+on:
+  release:
+    types:
+      - published
+  workflow_dispatch:
+
+jobs:
+  debug:
+    name: Debug
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        run: |
+          echo ${{ github.event_name }}
+          echo ${{ github.action.event }}
+          echo ${{ github.event_name == 'release' }}
+          echo ${{ github.action.event == 'created' }}
+          echo ${{ github.event_name == 'release' && github.action.event == 'created' }}
