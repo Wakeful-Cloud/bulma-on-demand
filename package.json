@@ -6,7 +6,8 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build": "vite build && npm --prefix node_modules/sass-embedded run postinstall",
+    "build": "vite build",
+    "build:vercel": "./scripts/build-vercel.sh",
     "dev": "vite",
     "fetch-bulma": "ts-node-esm scripts/fetch-bulma.ts",
     "lint": "eslint .",
