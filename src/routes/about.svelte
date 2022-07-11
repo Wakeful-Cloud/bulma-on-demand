@@ -73,11 +73,10 @@
 
   <h2 class="is-size-4">Is Bulma On Demand fast?</h2>
   <p class="is-size-5">
-    Yes. You can see this for yourself because this website uses Bulma On
-    Demand's API. Bulma On Demand uses an in-memory cache to reduce the number
-    of times Bulma is actually recompiled, thereby greatly improving
-    performance. This is also why the first request with a given set of
-    variables takes longer than successive requests.
+    Yes and no. Initial compilation is admittedly slow (This is a high priority
+    issue), but successive requests are much faster thanks to Bulma On Demand's
+    in-memory SASS cache and aggressive HTTP caching. You can see this for
+    yourself because this website uses Bulma On Demand's API.
   </p>
 
   <h2 class="is-size-4">Is Bulma On Demand secure?</h2>

@@ -84,17 +84,23 @@ ${Object.entries(variables).map(([key, value]) => `$${key}: ${value}`).join('\r\
     //Initialize the VM
     const vm = new NodeVM({
       allowAsync: false,
-      eval: false,
+      eval: true,
       require: {
         builtin: [
           'path/posix',
-          'url'
+          'url',
+          'util'
         ],
+        context: 'sandbox',
         external: {
           modules: [
-            'sass',
+            'immutable',
+            'sass'
           ],
           transitive: false
+        },
+        mock: {
+          fs: {}
         }
       },
       sandbox: {

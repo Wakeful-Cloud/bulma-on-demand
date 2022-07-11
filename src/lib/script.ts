@@ -10,9 +10,14 @@ import {VMScript} from 'vm2';
 /**
  * Bulma compiler script
  */
-const script = new VMScript(`//Imports
+const script = new VMScript(`//Native imports
 const {URL} = require('url');
 const {extname, format, join, parse} = require('path/posix');
+
+//Globals
+globalThis.URL = URL;
+
+//External imports
 const {compileString} = require('sass');
 
 //Compile the SASS
