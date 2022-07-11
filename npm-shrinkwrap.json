@@ -22,7 +22,6 @@
         "@sveltejs/adapter-node": "^1.0.0-next.79",
         "@sveltejs/adapter-vercel": "^1.0.0-next.60",
         "@sveltejs/kit": "next",
-        "@types/jszip": "^3.4.1",
         "@types/lodash-es": "^4.17.6",
         "@typescript-eslint/eslint-plugin": "^5.30.5",
         "@typescript-eslint/parser": "^5.30.5",
@@ -431,16 +430,6 @@
       "resolved": "https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.11.tgz",
       "integrity": "sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==",
       "dev": true
-    },
-    "node_modules/@types/jszip": {
-      "version": "3.4.1",
-      "resolved": "https://registry.npmjs.org/@types/jszip/-/jszip-3.4.1.tgz",
-      "integrity": "sha512-TezXjmf3lj+zQ651r6hPqvSScqBLvyPI9FxdXBqpEwBijNGQ2NXpaFW/7joGzveYkKQUil7iiDHLo6LV71Pc0A==",
-      "deprecated": "This is a stub types definition. jszip provides its own type definitions, so you do not need this installed.",
-      "dev": true,
-      "dependencies": {
-        "jszip": "*"
-      }
     },
     "node_modules/@types/keyv": {
       "version": "3.1.4",
@@ -4784,15 +4773,6 @@
       "resolved": "https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.11.tgz",
       "integrity": "sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==",
       "dev": true
-    },
-    "@types/jszip": {
-      "version": "3.4.1",
-      "resolved": "https://registry.npmjs.org/@types/jszip/-/jszip-3.4.1.tgz",
-      "integrity": "sha512-TezXjmf3lj+zQ651r6hPqvSScqBLvyPI9FxdXBqpEwBijNGQ2NXpaFW/7joGzveYkKQUil7iiDHLo6LV71Pc0A==",
-      "dev": true,
-      "requires": {
-        "jszip": "*"
-      }
     },
     "@types/keyv": {
       "version": "3.1.4",
