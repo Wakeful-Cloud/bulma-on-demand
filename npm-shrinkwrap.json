@@ -30,7 +30,7 @@
         "eslint-plugin-svelte3": "^4.0.0",
         "got": "^12.1.0",
         "jszip": "^3.10.0",
-        "lucide-svelte": "^0.73.0",
+        "lucide-svelte": "^0.75.0",
         "svelte": "^3.49.0",
         "svelte-check": "^2.8.0",
         "svelte-preprocess": "^4.10.7",
@@ -2707,9 +2707,9 @@
       }
     },
     "node_modules/lucide-svelte": {
-      "version": "0.73.0",
-      "resolved": "https://registry.npmjs.org/lucide-svelte/-/lucide-svelte-0.73.0.tgz",
-      "integrity": "sha512-XcBeTV562DusZZRQFn7g4F3IqZa5GO0+BLTcaNax189mHCwO13TU/wgl1iEOD5JHWYcFet8DmRP1eK3PYHwivQ==",
+      "version": "0.75.0",
+      "resolved": "https://registry.npmjs.org/lucide-svelte/-/lucide-svelte-0.75.0.tgz",
+      "integrity": "sha512-ocHbmbH6I1od/hUNgNRh8MsdYSgEvAwtKW56ctLioQUg807bzsNCdK3U62pwxePoLJaKyaDzAEIuV1u1FCUB/A==",
       "dev": true,
       "peerDependencies": {
         "svelte": "^3.45.0",
@@ -6415,9 +6415,9 @@
       "integrity": "sha512-OIP3DwzRZDfLg9B9VP/huWBlpvbkmbfiBy8xmsXp4RPmE4A3MhwNozc5ZJ3fWnSg8fDcdlE/neRTPG2ycEKliw=="
     },
     "lucide-svelte": {
-      "version": "0.73.0",
-      "resolved": "https://registry.npmjs.org/lucide-svelte/-/lucide-svelte-0.73.0.tgz",
-      "integrity": "sha512-XcBeTV562DusZZRQFn7g4F3IqZa5GO0+BLTcaNax189mHCwO13TU/wgl1iEOD5JHWYcFet8DmRP1eK3PYHwivQ==",
+      "version": "0.75.0",
+      "resolved": "https://registry.npmjs.org/lucide-svelte/-/lucide-svelte-0.75.0.tgz",
+      "integrity": "sha512-ocHbmbH6I1od/hUNgNRh8MsdYSgEvAwtKW56ctLioQUg807bzsNCdK3U62pwxePoLJaKyaDzAEIuV1u1FCUB/A==",
       "dev": true,
       "requires": {}
     },
