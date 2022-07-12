@@ -7,7 +7,7 @@ import Cache from 'lru-cache';
 import Hasher from 'node-object-hash';
 import files from './files';
 import type {Version} from './variables';
-import {compileString} from 'sass-embedded';
+import {compileStringAsync} from 'sass-embedded';
 import {extname, format, join, parse} from 'path/posix';
 
 //Cache
@@ -61,7 +61,7 @@ ${Object.entries(variables).map(([key, value]) => `$${key}: ${value}`).join('\r\
     const releaseFiles = files[version];
 
     //Compile the SASS
-    const result = compileString(source, {
+    const result = await compileStringAsync(source, {
       alertAscii: true,
       alertColor: false,
       //See https://sass-lang.com/documentation/js-api/interfaces/Importer

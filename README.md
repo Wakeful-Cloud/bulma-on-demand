@@ -23,9 +23,10 @@ docker run -p 3000:3000/tcp --rm --name bulma-on-demand ghcr.io/wakeful-cloud/bu
 
 #### Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwakeful-cloud%2Fbulma-on-demand&env=ENABLE_VC_BUILD&envDescription=Enables%20Vercel's%20Build%20Output%20API%20(Set%20to%201)&envLink=https%3A%2F%2Fvercel.com%2Fdocs%2Fbuild-output-api%2Fv3&project-name=bulma-on-demand&repo-name=bulma-on-demand)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwakeful-cloud%2Fbulma-on-demand&env=ENABLE_VC_BUILD&envDescription=Set%20to%20%601%60%20in%20order%20for%20SvelteKit%20to%20build%20correctly.&envLink=https%3A%2F%2Fvercel.com%2Fdocs%2Fbuild-output-api%2Fv3&project-name=bulma-on-demand&repo-name=bulma-on-demand)
 
-*Note: you need to set the `ENABLE_VC_BUILD` environment variable to `1`.*
+*Note: you need to use `npm run build:vercel` for the build command and set the `ENABLE_VC_BUILD`
+environment variable to `1`.*
 
 ### Environment Variables
 Name | Required/Default | Description

@@ -7,6 +7,7 @@
   "type": "module",
   "scripts": {
     "build": "vite build",
+    "build:vercel": "./scripts/build-vercel.sh",
     "dev": "vite",
     "fetch-bulma": "ts-node-esm scripts/fetch-bulma.ts",
     "lint": "eslint .",
@@ -26,7 +27,6 @@
     "@sveltejs/adapter-node": "^1.0.0-next.79",
     "@sveltejs/adapter-vercel": "^1.0.0-next.60",
     "@sveltejs/kit": "next",
-    "@types/jszip": "^3.4.1",
     "@types/lodash-es": "^4.17.6",
     "@typescript-eslint/eslint-plugin": "^5.30.5",
     "@typescript-eslint/parser": "^5.30.5",

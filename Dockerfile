@@ -1,5 +1,5 @@
 # Builder
-FROM node:18.5.0-alpine3.16 as builder
+FROM node:18.5.0-slim as builder
 
 # Copy source code
 COPY . .
@@ -11,11 +11,11 @@ RUN npm ci --include=dev
 RUN npm run build
 
 # Runner
-FROM node:18.5.0-alpine3.16
+FROM node:18.5.0-slim
 
 # Create a user
-RUN addgroup -S bulma
-RUN adduser -S -h /home/bulma -H -G bulma bulma
+RUN addgroup --system bulma
+RUN adduser --system --home /home/bulma --no-create-home --ingroup bulma bulma
 WORKDIR /home/bulma
 
 # Copy the build
