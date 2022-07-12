@@ -39,7 +39,7 @@ additionalMetaTags={[
   },
   {
     name: 'msapplication-TileColor',
-    content: '#2b5797'
+    content: '#333333'
   }
 ]}
 openGraph={{

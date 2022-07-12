@@ -3,12 +3,14 @@
 
 <svg
    width="4653"
-   height="512"
-   viewBox="0 0 436.21875 48"
+   height="768"
+   viewBox="0 0 436.21875 72"
    version="1.1"
    id="svg5"
    inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
    sodipodi:docname="logo.svg"
+   inkscape:export-xdpi="127.87"
+   inkscape:export-ydpi="127.87"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -24,17 +26,34 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="px"
      showgrid="false"
-     inkscape:zoom="0.16"
-     inkscape:cx="2253.125"
-     inkscape:cy="-678.125"
+     inkscape:zoom="0.22627417"
+     inkscape:cx="1869.4136"
+     inkscape:cy="413.21553"
      inkscape:window-width="1920"
-     inkscape:window-height="984"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
+     inkscape:window-height="1009"
+     inkscape:window-x="1072"
+     inkscape:window-y="526"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg5" />
+     inkscape:current-layer="layer1" />
   <defs
      id="defs2">
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect995"
+       is_visible="true"
+       lpeversion="1"
+       nodesatellites_param="F,0,0,1,0,0.5,0,1 @ F,0,0,1,0,0.5,0,1 @ F,0,0,1,0,0.5,0,1 @ F,0,0,1,0,0.5,0,1 @ F,0,0,1,0,0.5,0,1 @ F,0,0,1,0,0.5,0,1 @ F,0,0,1,0,0.5,0,1 @ F,0,0,1,0,0.5,0,1 @ F,0,0,1,0,0.5,0,1 @ F,0,0,1,0,0.5,0,1 @ F,0,0,1,0,0.5,0,1 @ F,0,0,1,0,0.5,0,1 @ F,0,0,1,0,0.5,0,1"
+       unit="px"
+       method="auto"
+       mode="F"
+       radius="0.5"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
     <rect
        x="548.01788"
        y="75.584656"
@@ -53,25 +72,37 @@
      inkscape:groupmode="layer"
      id="layer1"
      style="display:inline">
+    <g
+       id="g974"
+       transform="translate(4.9420801,14.412792)"
+       inkscape:label="Icon">
+      <path
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         d="m -3.94e-5,33.262368 3,-21 12.0000254,-11.9999997 15,14.9999997 -9,9 12,12 -18,12.000001 z"
+         fill="#00d1b2"
+         id="path715-3"
+         style="display:inline;stroke-width:1.2"
+         inkscape:label="Original" />
+      <path
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:3.75;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
+         d="m 18.891415,-3.8992262 c -2.320157,0.1504601 -4.45161,1.3383785 -5.799981,3.23249075 -0.16012,0.22492767 -0.434424,0.25647151 -0.6508,0.0851244 C 11.770099,-1.1126064 10.963108,-1.4441267 10.112938,-1.5378526 9.8385976,-1.568097 9.3893028,-1.5681492 9.1149212,-1.5382415 6.9988051,-1.3075834 5.3182259,0.3729451 5.08749,2.489038 5.0575618,2.7635113 5.0578782,3.2128867 5.0884413,3.487193 5.1119135,3.6978563 4.9244042,3.8398087 4.64858,3.8277013 c -0.1780309,-0.00781 -0.5467316,-0.00888 -0.8222102,0.0095 -3.68510958,0.2459087 -6.6311699,3.1919709 -6.8770758,6.8770811 -0.018382,0.275475 -0.018382,0.723778 4e-7,0.999256 0.2459091,3.68511 3.19197149,6.63117 6.877082,6.877076 0.275475,0.01838 0.7234823,0.01662 0.9996247,0.01662 H 25.109283 c 0.276142,0 0.724263,0.0021 0.999494,-0.01946 3.033254,-0.237295 5.453437,-2.616971 5.698323,-5.601403 0.02258,-0.275137 0.02257,-0.723745 -1.35e-4,-0.998875 C 31.592514,9.3888739 29.719373,7.2034117 27.152376,6.5579674 26.884588,6.4906351 26.741115,6.2451368 26.81834,5.9800627 c 0.157606,-0.5409758 0.255637,-1.0975629 0.292347,-1.6598322 0.01799,-0.275507 0.01812,-0.7237684 5.56e-4,-0.9993049 -0.246989,-3.87445292 -3.346073,-6.9735357 -7.220526,-7.2205219 -0.275533,-0.017565 -0.499655,-0.015874 -0.499653,-0.015871 z"
+         id="path912"
+         inkscape:label="Cloud"
+         inkscape:path-effect="#path-effect995"
+         inkscape:original-d="M 19.391064,-3.9154674 A 7.736059,7.736059 0 0 0 12.8148,-0.25032701 4.5535031,4.5535031 0 0 0 9.613944,-1.5652725 4.5535031,4.5535031 0 0 0 5.0604404,2.9882292 4.5535031,4.5535031 0 0 0 5.1469772,3.8664956 7.3933223,7.3933223 0 0 0 4.3260011,3.820589 7.3933223,7.3933223 0 0 0 -3.0673215,11.213911 7.3933223,7.3933223 0 0 0 4.3260011,18.607233 H 25.609283 a 6.2182246,6.1203001 0 0 0 6.218223,-6.1203 6.2182246,6.1203001 0 0 0 -5.16443,-6.0316798 7.736059,7.736059 0 0 0 0.464044,-2.6346642 7.736059,7.736059 0 0 0 -7.73606,-7.736062 z" />
+    </g>
     <text
        xml:space="preserve"
-       transform="matrix(0.09375,0,0,0.09375,-3.7336493,-10.547912)"
+       transform="matrix(0.09375,0,0,0.09375,-3.7336493,1.1720189)"
        id="text1340"
        style="font-style:normal;font-weight:normal;font-size:517.333px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect1342);display:inline;fill:#ff0000;fill-opacity:1;stroke:none"
        inkscape:label="Text"><tspan
          x="548.01758"
          y="560.58368"
-         id="tspan1461"><tspan
+         id="tspan1029"><tspan
            dx="0 0 0 0 0 0 0 0 0.00012207031 0 0 0 0 0.00012207031 -0.00012207031"
            style="font-weight:bold;font-family:Dosis;-inkscape-font-specification:'Dosis Bold';fill:#000000"
-           id="tspan1459">BULMA ON DEMAND</tspan></tspan></text>
-    <path
-       fill-rule="evenodd"
-       clip-rule="evenodd"
-       d="m -3.94e-5,33.262368 3,-21 12.0000254,-11.9999997 15,14.9999997 -9,9 12,12 -18,12.000001 z"
-       fill="#00d1b2"
-       id="path715-3"
-       style="display:inline;stroke-width:1.2"
-       inkscape:label="Icon" />
+           id="tspan1027">BULMA ON DEMAND</tspan></tspan></text>
   </g>
 </svg>
