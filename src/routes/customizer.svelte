@@ -19,6 +19,7 @@
     variables: [] as Variable[],
     minify: true,
   };
+
   const output = {
     url: new URL('invalid://error'),
     snippet: undefined as string | undefined,
@@ -48,7 +49,7 @@
   {
     //Parse the existing URL
     try 
-  {
+    {
       const url = new URL(input.existing, 'https://dummy');
 
       //Parse the suffix
@@ -57,7 +58,7 @@
       );
 
       if (suffix == null || suffix.length != 3) 
-  {
+      {
         throw new Error('Invalid CSS URL!');
       }
 
@@ -78,9 +79,60 @@
       input.existing = '';
     }
    catch (err) 
-  {
+    {
       error.show(err as string);
     }
+  };
+
+  const onDragStart = (event: DragEvent) => 
+  {
+    //Get the dragged index
+    const draggedIndex = input.variables.findIndex(
+      variable =>
+        variable.name == (event.target as HTMLElement)?.dataset?.variable
+    );
+
+    //Store the index
+    event.dataTransfer?.setData(
+      'application/json',
+      JSON.stringify(draggedIndex)
+    );
+  };
+
+  const onDrop = (event: DragEvent) => 
+  {
+    //Retrieve the dragged index
+    const draggedIndex = JSON.parse(
+      event.dataTransfer?.getData('application/json') ?? '-1'
+    );
+
+    //Get the dropped index
+    let droppedIndex = -1;
+
+    for (const candidate of event.composedPath()) 
+    {
+      //Get the index for the candidate
+      const candidateIndex = input.variables.findIndex(
+        variable =>
+          variable.name == (candidate as HTMLElement)?.dataset?.variable
+      );
+
+      //If the candidate index isn't invalid, use it
+      if (candidateIndex != -1) 
+      {
+        droppedIndex = candidateIndex;
+      }
+    }
+
+    if (draggedIndex < 0 || droppedIndex < 0) 
+    {
+      return;
+    }
+
+    //Get the dragged variable, filter it out, and insert it after the dropped variable
+    const tempVariable = input.variables[draggedIndex]!;
+    input.variables = input.variables.filter(variable => variable != tempVariable);
+    input.variables.splice(droppedIndex, 0, tempVariable);
   };
 
   const addVariable = () => 
@@ -106,12 +158,12 @@
 
     //Skip if SSR
     if (output.url.protocol.startsWith('invalid')) 
-  {
+    {
       return;
     }
 
     try 
-  {
+    {
       //Get the integrity
       const integrity = await getIntegrity(output.url);
 
@@ -119,7 +171,7 @@
       output.snippet = `<link rel="stylesheet" href="${output.url.toString()}" integrity="${integrity}" crossorigin="anonymous">`;
     }
    catch (err) 
-  {
+    {
       error.show(err as string);
       return;
     }
@@ -211,7 +263,13 @@
         <!-- Body -->
         <tbody>
           {#each input.variables as variable, index}
-            <tr>
+            <tr
+              data-variable={variable.name}
+              draggable="true"
+              on:dragstart={onDragStart}
+              on:dragover|preventDefault
+              on:drop|preventDefault={onDrop}
+            >
               <!-- Name -->
               <td>
                 <select
@@ -365,5 +423,22 @@
 
   .wrap {
     overflow-wrap: break-word;
+  }
+
+  tbody > tr {
+    cursor: grab;
+    transition-duration: 200ms;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    tbody > tr:hover {
+      background-color: #404040 !important;
+    }
+  }
+
+  @media (prefers-color-scheme: light) {
+    tbody > tr:hover {
+      background-color: #e8e8e8 !important;
+    }
   }
 </style>

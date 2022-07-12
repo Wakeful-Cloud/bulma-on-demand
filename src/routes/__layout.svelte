@@ -1,11 +1,72 @@
 <script lang="ts">
   //Imports
   import {Github, Home, Info, Sliders} from 'lucide-svelte';
+  import {MetaTags} from 'svelte-meta-tags';
   import {error} from '$lib/stores';
+
+  //Data
+  const title = 'Bulma On Demand';
+  const description = 'Customize Bulma without installing anything';
+  const canonicalUrl = import.meta.env.VITE_CANONICAL_URL ?? 'https://bulma-on-demand.vercel.app';
+  const author = 'Wakeful Cloud';
+  const keywords = 'Bulma,SASS,Svelte,SvelteKit';
+
+  const darkLogoAlt = 'Dark logo';
+  const darkLogoUrl = new URL('/logo-dark.webp', canonicalUrl).toString();
+  const lightLogoAlt = 'Light logo';
+  const lightLogoUrl = new URL('/logo-light.webp', canonicalUrl).toString();
 
   //State
   let menuOpen = false;
 </script>
+
+<!-- Metadata -->
+<MetaTags
+{title}
+{description}
+additionalMetaTags={[
+  {
+    name: 'keywords',
+    content: keywords
+  },
+  {
+    name: 'author',
+    content: author
+  },
+  {
+    name: 'theme-color',
+    content: '#00d1b2'
+  },
+  {
+    name: 'msapplication-TileColor',
+    content: '#2b5797'
+  }
+]}
+openGraph={{
+  type: 'website',
+  url: canonicalUrl,
+  title,
+  site_name: title,
+  description,
+  images: [
+    {
+      url: darkLogoUrl,
+      alt: darkLogoAlt
+    },
+    {
+      url: lightLogoUrl,
+      alt: lightLogoAlt
+    }
+  ]
+}}
+twitter={{
+  cardType: 'summary_large_image',
+  title,
+  description,
+  image: darkLogoUrl,
+  imageAlt: darkLogoAlt
+}}
+/>
 
 <!-- Header-->
 <header class="navbar" role="navigation" aria-label="main navigation">

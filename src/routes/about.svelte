@@ -32,7 +32,7 @@
       lightUrl.protocol.startsWith('invalid') ||
       darkUrl.protocol.startsWith('invalid')
     ) 
-  {
+    {
       return;
     }
 
