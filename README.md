@@ -33,7 +33,7 @@ Name | Required/Default | Description
 --- | --- | ---
 `CACHE_MAX` | `2560` | Maximum number of cached Bulma compilations (Each compilation is ~210 KiB)
 `CACHE_TTL` | 1 hour | Cached Bulma compilation Time To Live in milliseconds
-`VITE_CANONICAL_URL` `https://bulma-on-demand.vercel.app` | HTML/OpenGraph canonical URL
+`VITE_CANONICAL_URL` | `https://bulma-on-demand.vercel.app` | HTML/OpenGraph canonical URL
 
 ### Development
 1. Install prerequisites:
