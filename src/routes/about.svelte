@@ -1,36 +1,38 @@
 <script lang="ts">
   //Imports
-  import getIntegrity from "$lib/integrity";
+  import getIntegrity from '$lib/integrity';
 
   //State
   const suggestedVariables = {
-    "scheme-main": "hsl(0, 0%, 10%)",
-    "scheme-main-bis": "hsl(0, 0%, 13%)",
-    "scheme-main-ter": "hsl(0, 0%, 20%)",
-    "scheme-invert": "hsl(0, 0%, 100%)",
-    "scheme-invert-bis": "hsl(0, 0%, 98%)",
-    "scheme-invert-ter": "hsl(0, 0%, 96%)",
-    background: "hsl(0, 0%, 14%)",
-    text: "hsl(0, 0%, 71%)",
-    "text-strong": "hsl(0, 0%, 79%)",
-    shadow:
-      "0 0.5em 1em -0.125em rgba(hsl(0, 0%, 10%), 0.1), 0 0px 0 1px rgba(hsl(0, 0%, 10%), 0.02)",
+    'scheme-main': 'hsl(0, 0%, 10%)',
+    'scheme-main-bis': 'hsl(0, 0%, 13%)',
+    'scheme-main-ter': 'hsl(0, 0%, 20%)',
+    'scheme-invert': 'hsl(0, 0%, 100%)',
+    'scheme-invert-bis': 'hsl(0, 0%, 98%)',
+    'scheme-invert-ter': 'hsl(0, 0%, 96%)',
+    'background': 'hsl(0, 0%, 14%)',
+    'text': 'hsl(0, 0%, 71%)',
+    'text-strong': 'hsl(0, 0%, 79%)',
+    'shadow':
+      '0 0.5em 1em -0.125em rgba(hsl(0, 0%, 10%), 0.1), 0 0px 0 1px rgba(hsl(0, 0%, 10%), 0.02)',
   };
 
   const base =
-    typeof window != "undefined" ? window.location.origin : "invalid://error";
-  const lightUrl = new URL("/api/bulma-0.9.4.min.css", base);
-  const darkUrl = new URL("/api/bulma-0.9.4.min.css", base);
+    typeof window != 'undefined' ? window.location.origin : 'invalid://error';
+  const lightUrl = new URL('/api/bulma-0.9.4.min.css', base);
+  const darkUrl = new URL('/api/bulma-0.9.4.min.css', base);
   darkUrl.search = new URLSearchParams(suggestedVariables).toString();
 
-  let snippet = "";
+  let snippet = '';
 
-  (async () => {
+  (async () => 
+  {
     //Skip if SSR
     if (
-      lightUrl.protocol.startsWith("invalid") ||
-      darkUrl.protocol.startsWith("invalid")
-    ) {
+      lightUrl.protocol.startsWith('invalid') ||
+      darkUrl.protocol.startsWith('invalid')
+    ) 
+  {
       return;
     }
 
@@ -71,10 +73,11 @@
 
   <h2 class="is-size-4">Is Bulma On Demand fast?</h2>
   <p class="is-size-5">
-    Yes and no. Initial compilation is admittedly slow (This is a high priority
-    issue), but successive requests are much faster thanks to Bulma On Demand's
-    in-memory SASS cache and aggressive HTTP caching. You can see this for
-    yourself because this website uses Bulma On Demand's API.
+    Usually. Initial compilation is somewhat slow, but successive requests are
+    much faster thanks to Bulma On Demand's in-memory cache and aggressive HTTP
+    caching. You can see this for yourself because this website uses Bulma On
+    Demand's API. If you're concerned about performance, you can always just
+    download the output CSS file and serve it manually.
   </p>
 
   <h2 class="is-size-4">Is Bulma On Demand secure?</h2>
