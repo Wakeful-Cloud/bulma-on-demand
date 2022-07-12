@@ -310,9 +310,9 @@
       }
     },
     "node_modules/@sveltejs/kit": {
-      "version": "1.0.0-next.359",
-      "resolved": "https://registry.npmjs.org/@sveltejs/kit/-/kit-1.0.0-next.359.tgz",
-      "integrity": "sha512-3WH198JhOI9rmDlVSPPHlgg+/R/gS4x5cETjYsIw3XckpN2zExDqlYHUBUwk/dEG/12BfPB3rDMNzdZ0QHtubQ==",
+      "version": "1.0.0-next.369",
+      "resolved": "https://registry.npmjs.org/@sveltejs/kit/-/kit-1.0.0-next.369.tgz",
+      "integrity": "sha512-7kSOz6RIehSgV+HgrkV7m9tFkA5Dey/j0sw7vXtSdgcKUCbEwG84Mbk0vH9C2FTLL/9mlEGvxS5AqQ6m/VSv8Q==",
       "dev": true,
       "dependencies": {
         "@sveltejs/vite-plugin-svelte": "^1.0.0-next.48",
@@ -323,7 +323,7 @@
         "svelte-kit": "svelte-kit.js"
       },
       "engines": {
-        "node": ">=16.7"
+        "node": ">=16.9"
       },
       "peerDependencies": {
         "svelte": "^3.44.0",
@@ -4682,9 +4682,9 @@
       }
     },
     "@sveltejs/kit": {
-      "version": "1.0.0-next.359",
-      "resolved": "https://registry.npmjs.org/@sveltejs/kit/-/kit-1.0.0-next.359.tgz",
-      "integrity": "sha512-3WH198JhOI9rmDlVSPPHlgg+/R/gS4x5cETjYsIw3XckpN2zExDqlYHUBUwk/dEG/12BfPB3rDMNzdZ0QHtubQ==",
+      "version": "1.0.0-next.369",
+      "resolved": "https://registry.npmjs.org/@sveltejs/kit/-/kit-1.0.0-next.369.tgz",
+      "integrity": "sha512-7kSOz6RIehSgV+HgrkV7m9tFkA5Dey/j0sw7vXtSdgcKUCbEwG84Mbk0vH9C2FTLL/9mlEGvxS5AqQ6m/VSv8Q==",
       "dev": true,
       "requires": {
         "@sveltejs/vite-plugin-svelte": "^1.0.0-next.48",
