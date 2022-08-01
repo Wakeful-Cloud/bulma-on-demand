@@ -38,7 +38,7 @@ const schemas = Object.fromEntries(Object.entries(variables).map(([version, rele
  * @param ctx Response context
  * @returns Response
  */
-export const get: RequestHandler = async ctx =>
+export const GET: RequestHandler = async ctx =>
 {
   //Get the raw query parameters
   const query = Object.fromEntries(ctx.url.searchParams.entries());
