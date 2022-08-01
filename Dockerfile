@@ -1,5 +1,5 @@
 # Builder
-FROM node:18.5.0-slim as builder
+FROM node:18.7.0-slim as builder
 
 # Copy source code
 COPY . .
@@ -11,7 +11,7 @@ RUN npm ci --include=dev
 RUN npm run build
 
 # Runner
-FROM node:18.5.0-slim
+FROM node:18.7.0-slim
 
 # Create a user
 RUN addgroup --system bulma
