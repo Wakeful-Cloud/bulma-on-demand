@@ -21,7 +21,7 @@
         "@sveltejs/adapter-netlify": "^1.0.0-next.67",
         "@sveltejs/adapter-node": "^1.0.0-next.79",
         "@sveltejs/adapter-vercel": "^1.0.0-next.60",
-        "@sveltejs/kit": "^1.0.0-next.369",
+        "@sveltejs/kit": "^1.0.0-next.372",
         "@types/lodash-es": "^4.17.6",
         "@typescript-eslint/eslint-plugin": "^5.30.6",
         "@typescript-eslint/parser": "^5.30.6",
@@ -311,12 +311,12 @@
       }
     },
     "node_modules/@sveltejs/kit": {
-      "version": "1.0.0-next.369",
-      "resolved": "https://registry.npmjs.org/@sveltejs/kit/-/kit-1.0.0-next.369.tgz",
-      "integrity": "sha512-7kSOz6RIehSgV+HgrkV7m9tFkA5Dey/j0sw7vXtSdgcKUCbEwG84Mbk0vH9C2FTLL/9mlEGvxS5AqQ6m/VSv8Q==",
+      "version": "1.0.0-next.372",
+      "resolved": "https://registry.npmjs.org/@sveltejs/kit/-/kit-1.0.0-next.372.tgz",
+      "integrity": "sha512-pcnDfV8YQwj7d/SCaKWT7yPBrmgkPH9Dc4UIeX8yTLXDu8IPzI5kukEOy4xf6LjyJsuSGPy1Ch91ULugtVIdAQ==",
       "dev": true,
       "dependencies": {
-        "@sveltejs/vite-plugin-svelte": "^1.0.0-next.48",
+        "@sveltejs/vite-plugin-svelte": "1.0.0-next.49",
         "chokidar": "^3.5.3",
         "sade": "^1.8.1"
       },
@@ -4704,12 +4704,12 @@
       }
     },
     "@sveltejs/kit": {
-      "version": "1.0.0-next.369",
-      "resolved": "https://registry.npmjs.org/@sveltejs/kit/-/kit-1.0.0-next.369.tgz",
-      "integrity": "sha512-7kSOz6RIehSgV+HgrkV7m9tFkA5Dey/j0sw7vXtSdgcKUCbEwG84Mbk0vH9C2FTLL/9mlEGvxS5AqQ6m/VSv8Q==",
+      "version": "1.0.0-next.372",
+      "resolved": "https://registry.npmjs.org/@sveltejs/kit/-/kit-1.0.0-next.372.tgz",
+      "integrity": "sha512-pcnDfV8YQwj7d/SCaKWT7yPBrmgkPH9Dc4UIeX8yTLXDu8IPzI5kukEOy4xf6LjyJsuSGPy1Ch91ULugtVIdAQ==",
       "dev": true,
       "requires": {
-        "@sveltejs/vite-plugin-svelte": "^1.0.0-next.48",
+        "@sveltejs/vite-plugin-svelte": "1.0.0-next.49",
         "chokidar": "^3.5.3",
         "sade": "^1.8.1"
       }
