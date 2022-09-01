@@ -20,7 +20,7 @@
         "@sveltejs/adapter-cloudflare": "^1.0.0-next.31",
         "@sveltejs/adapter-netlify": "^1.0.0-next.71",
         "@sveltejs/adapter-node": "^1.0.0-next.85",
-        "@sveltejs/adapter-vercel": "^1.0.0-next.66",
+        "@sveltejs/adapter-vercel": "^1.0.0-next.72",
         "@sveltejs/kit": "^1.0.0-next.401",
         "@types/lodash-es": "^4.17.6",
         "@typescript-eslint/eslint-plugin": "^5.32.0",
@@ -307,12 +307,12 @@
       }
     },
     "node_modules/@sveltejs/adapter-vercel": {
-      "version": "1.0.0-next.66",
-      "resolved": "https://registry.npmjs.org/@sveltejs/adapter-vercel/-/adapter-vercel-1.0.0-next.66.tgz",
-      "integrity": "sha512-s3Hcxu9nCG/rR3C3cFbdQGjTa5W4K2kRcc6S5Xefx7itbrw+4v3KpO8ZPB6qM55XDwVxuG7260NMHVI6MUGmSA==",
+      "version": "1.0.0-next.72",
+      "resolved": "https://registry.npmjs.org/@sveltejs/adapter-vercel/-/adapter-vercel-1.0.0-next.72.tgz",
+      "integrity": "sha512-oNs8FQaYC2NnwDcvX/jc9MDNqXc9HxwGPQNkd+1vBpFVWZl9mShQgCcOMzfTOIH0ka984jYNa0ZawYYHex79xg==",
       "dev": true,
       "dependencies": {
-        "@vercel/nft": "^0.21.0",
+        "@vercel/nft": "^0.22.0",
         "esbuild": "^0.14.48"
       }
     },
@@ -687,9 +687,9 @@
       }
     },
     "node_modules/@vercel/nft": {
-      "version": "0.21.0",
-      "resolved": "https://registry.npmjs.org/@vercel/nft/-/nft-0.21.0.tgz",
-      "integrity": "sha512-hFCAETfI5cG8l5iAiLhMC2bReC5K7SIybzrxGorv+eGspIbIFsVw7Vg85GovXm/LxA08pIDrAlrhR6GN36XB/Q==",
+      "version": "0.22.0",
+      "resolved": "https://registry.npmjs.org/@vercel/nft/-/nft-0.22.0.tgz",
+      "integrity": "sha512-hB80/093PPiCefN2gVbqv6J93MH+63Zr7uDCwkiS/U4W07DXkLoftbnkBmZoS0Q84LiTSl9DRVSHU4XYCX+sJA==",
       "dev": true,
       "dependencies": {
         "@mapbox/node-pre-gyp": "^1.0.5",
@@ -4778,12 +4778,12 @@
       }
     },
     "@sveltejs/adapter-vercel": {
-      "version": "1.0.0-next.66",
-      "resolved": "https://registry.npmjs.org/@sveltejs/adapter-vercel/-/adapter-vercel-1.0.0-next.66.tgz",
-      "integrity": "sha512-s3Hcxu9nCG/rR3C3cFbdQGjTa5W4K2kRcc6S5Xefx7itbrw+4v3KpO8ZPB6qM55XDwVxuG7260NMHVI6MUGmSA==",
+      "version": "1.0.0-next.72",
+      "resolved": "https://registry.npmjs.org/@sveltejs/adapter-vercel/-/adapter-vercel-1.0.0-next.72.tgz",
+      "integrity": "sha512-oNs8FQaYC2NnwDcvX/jc9MDNqXc9HxwGPQNkd+1vBpFVWZl9mShQgCcOMzfTOIH0ka984jYNa0ZawYYHex79xg==",
       "dev": true,
       "requires": {
-        "@vercel/nft": "^0.21.0",
+        "@vercel/nft": "^0.22.0",
         "esbuild": "^0.14.48"
       }
     },
@@ -5039,9 +5039,9 @@
       }
     },
     "@vercel/nft": {
-      "version": "0.21.0",
-      "resolved": "https://registry.npmjs.org/@vercel/nft/-/nft-0.21.0.tgz",
-      "integrity": "sha512-hFCAETfI5cG8l5iAiLhMC2bReC5K7SIybzrxGorv+eGspIbIFsVw7Vg85GovXm/LxA08pIDrAlrhR6GN36XB/Q==",
+      "version": "0.22.0",
+      "resolved": "https://registry.npmjs.org/@vercel/nft/-/nft-0.22.0.tgz",
+      "integrity": "sha512-hB80/093PPiCefN2gVbqv6J93MH+63Zr7uDCwkiS/U4W07DXkLoftbnkBmZoS0Q84LiTSl9DRVSHU4XYCX+sJA==",
       "dev": true,
       "requires": {
         "@mapbox/node-pre-gyp": "^1.0.5",
