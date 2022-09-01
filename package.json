@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@octokit/types": "^6.41.0",
-    "@sveltejs/adapter-cloudflare": "^1.0.0-next.31",
+    "@sveltejs/adapter-cloudflare": "^1.0.0-next.32",
     "@sveltejs/adapter-netlify": "^1.0.0-next.71",
     "@sveltejs/adapter-node": "^1.0.0-next.85",
     "@sveltejs/adapter-vercel": "^1.0.0-next.66",
