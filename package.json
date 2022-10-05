@@ -21,7 +21,7 @@
     "yup": "^1.0.0-beta.4"
   },
   "devDependencies": {
-    "@octokit/types": "^6.41.0",
+    "@octokit/types": "^7.5.1",
     "@sveltejs/adapter-cloudflare": "^1.0.0-next.38",
     "@sveltejs/adapter-netlify": "^1.0.0-next.78",
     "@sveltejs/adapter-node": "^1.0.0-next.85",
