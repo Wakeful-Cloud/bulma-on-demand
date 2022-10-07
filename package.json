@@ -35,7 +35,7 @@
     "eslint-plugin-svelte3": "^4.0.0",
     "got": "^12.5.1",
     "jszip": "^3.10.1",
-    "lucide-svelte": "^0.84.0",
+    "lucide-svelte": "^0.91.0",
     "svelte": "^3.50.1",
     "svelte-check": "^2.8.0",
     "svelte-meta-tags": "^2.6.1",
