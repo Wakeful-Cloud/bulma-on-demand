@@ -10,7 +10,7 @@
     Customize <a
       href="https://bulma.io"
       target="_blank"
-      rel="noreferer nofollow">Bulma</a
+      rel="noreferrer nofollow">Bulma</a
     > without installing anything
   </p>
   <a class="button is-light is-primary" href="/customizer"><span class="mr-1">Get started</span><span class="icon ml-1"><ArrowRight /></span></a>

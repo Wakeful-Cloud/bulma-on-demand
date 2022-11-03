@@ -55,7 +55,7 @@
     Bulma On Demand works by running <a
       href="https://sass-lang.com"
       target="_blank"
-      rel="noreferer nofollow">SASS</a
+      rel="noreferrer nofollow">SASS</a
     >
     against Bulma using the variables you provide.
   </p>
@@ -67,7 +67,7 @@
     but you can use it on any website. However, if you're already using SASS for
     other aspects of your website, you're probably better off just <a
       href="https://bulma.io/documentation/customize"
-      rel="noreferer nofollow">customizing Bulma directly</a
+      rel="noreferrer nofollow">customizing Bulma directly</a
     >.
   </p>
 
@@ -85,7 +85,7 @@
     Most likely. Bulma On Demand supports <a
       href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity"
       target="_blank"
-      rel="noreferer nofollow">subresource integrity hashes</a
+      rel="noreferrer nofollow">subresource integrity hashes</a
     >
     to prevent tampering with the style sheets.
   </p>
@@ -102,7 +102,7 @@
     <a
       href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme"
       target="_blank"
-      rel="noreferer nofollow">here</a
+      rel="noreferrer nofollow">here</a
     >). Finally, change some of the variables in the dark mode CSS URL to make
     Bulma actually dark. Some good defaults are:
   </p>
@@ -140,7 +140,7 @@
     your <a
       href="https://developer.mozilla.org/docs/Web/HTML/Element/head"
       target="_blank"
-      rel="noreferer nofollow"><code>head</code> element</a
+      rel="noreferrer nofollow"><code>head</code> element</a
     >:
   </p>
 

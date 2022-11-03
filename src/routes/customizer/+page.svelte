@@ -240,7 +240,7 @@
       See the <a
         href="https://github.com/jgthms/bulma/releases"
         target="_blank"
-        rel="noreferer nofollow">Bulma releases</a
+        rel="noreferrer nofollow">Bulma releases</a
       > for more information.
     </p>
   </div>
@@ -327,13 +327,13 @@
       See <a
         href="https://bulma.io/documentation/customize/variables"
         target="_blank"
-        rel="noreferer nofollow">Bulma's documentation</a
+        rel="noreferrer nofollow">Bulma's documentation</a
       >
       for more information. Full
       <a
         href="https://sass-lang.com/documentation/syntax/structure#expressions"
         target="_blank"
-        rel="noreferer nofollow">SASS syntax</a
+        rel="noreferrer nofollow">SASS syntax</a
       > is supported.
     </p>
   </div>
@@ -349,7 +349,7 @@
       <a
         href="https://developer.mozilla.org/en-US/docs/Glossary/minification"
         target="_blank"
-        rel="noreferer nofollow">Minify</a
+        rel="noreferrer nofollow">Minify</a
       >
       the output CSS. <b>This is strongly recommended.</b>
     </p>
@@ -398,12 +398,12 @@
       Add this to your website's <a
         href="https://developer.mozilla.org/docs/Web/HTML/Element/head"
         target="_blank"
-        rel="noreferer nofollow"><code>head</code> element</a
+        rel="noreferrer nofollow"><code>head</code> element</a
       >. If you change any query parameters without updating the
       <a
         href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity"
         target="_blank"
-        rel="noreferer nofollow">integrity</a
+        rel="noreferrer nofollow">integrity</a
       >, <b>Bulma On Demand will not work!</b>
     </p>
   </div>

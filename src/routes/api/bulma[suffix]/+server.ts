@@ -4,16 +4,9 @@
 
 //Imports
 import compile from '$lib/compile';
-import sass from 'sass-embedded';
-import type {RequestHandler, RequestHandlerOutput} from '@sveltejs/kit';
+import {error, type RequestHandler} from '@sveltejs/kit';
 import {type ObjectSchema, ValidationError, object, string} from 'yup';
 import {variables, versions, type Version} from '$lib/variables';
-
-//Common response headers
-const headers = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Methods': 'GET'
-} as RequestHandlerOutput['headers'];
 
 //Suffix pattern
 const suffixPattern = /^(?:-(\d+\.\d+\.\d+))?\.(css|min\.css)$/;
@@ -40,6 +33,12 @@ const schemas = Object.fromEntries(Object.entries(variables).map(([version, rele
  */
 export const GET: RequestHandler = async ctx =>
 {
+  //Set common headers
+  ctx.setHeaders({
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'GET'
+  });
+
   //Get the raw query parameters
   const query = Object.fromEntries(ctx.url.searchParams.entries());
 
@@ -68,24 +67,16 @@ export const GET: RequestHandler = async ctx =>
       stripUnknown: true
     });
   }
-  catch (error)
+  catch (err)
   {
-    if (error instanceof ValidationError)
+    if (err instanceof ValidationError)
     {
-      return {
-        headers,
-        body: error.errors.join('\r\n'),
-        status: 400
-      };
+      throw error(400, err);
     }
     else
     {
-      console.error(error);
-      return {
-        headers,
-        body: 'Invalid request format!',
-        status: 400
-      };
+      console.error(err);
+      throw error(400, 'Invalid request format!');
     }
   }
 
@@ -95,33 +86,24 @@ export const GET: RequestHandler = async ctx =>
     //Compile
     const css = await compile(version, minify, userVariables);
 
-    return {
-      body: css,
-      headers: {
-        ...headers,
-        'Cache-Control': 'max-age=31536000, stale-while-revalidate, no-transform, immutable',
-        'Content-Type': 'text/css'
-      }
-    };
+    //Add additional headers
+    ctx.setHeaders({
+      'Cache-Control': 'max-age=31536000, stale-while-revalidate, no-transform, immutable',
+      'Content-Type': 'text/css'
+    });
+
+    return new Response(css);
   }
-  catch (error)
+  catch (err)
   {
-    if (error instanceof sass.Exception)
+    if (err instanceof ValidationError)
     {
-      return {
-        headers,
-        body: error.toString(),
-        status: 400
-      };
+      throw error(400, err);
     }
     else
     {
-      console.error(error);
-      return {
-        headers,
-        body: 'Invalid request format!',
-        status: 400
-      };
+      console.error(err);
+      throw error(400, 'Invalid request format!');
     }
   }
 };

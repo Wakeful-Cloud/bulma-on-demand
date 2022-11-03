@@ -117,7 +117,7 @@ twitter={{
       class="navbar-item"
       href="https://github.com/wakeful-cloud/bulma-on-demand"
       target="_blank"
-      rel="noreferer nofollow"
+      rel="noreferrer nofollow"
     >
       <span class="icon mr-1"><Github /></span>
       <span class="ml-1">GitHub</span>
@@ -139,7 +139,7 @@ twitter={{
       Made with ❤️ by <a
         href="https://wakefulcloud.dev"
         target="_blank"
-        rel="noreferer nofollow">Wakeful Cloud</a
+        rel="noreferrer nofollow">Wakeful Cloud</a
       >.
       <br />
       Bulma On Demand is not affiliated with Jeremy Thomas.
