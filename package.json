@@ -25,7 +25,7 @@
     "@sveltejs/adapter-cloudflare": "^1.0.0-next.40",
     "@sveltejs/adapter-netlify": "^1.0.0-next.83",
     "@sveltejs/adapter-node": "^1.0.0-next.100",
-    "@sveltejs/adapter-vercel": "^1.0.0-next.81",
+    "@sveltejs/adapter-vercel": "^1.0.0-next.66",
     "@sveltejs/kit": "^1.0.0-next.532",
     "@types/lodash-es": "^4.17.6",
     "@typescript-eslint/eslint-plugin": "^5.42.0",

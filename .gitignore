@@ -1,6 +1,7 @@
 # SvelteKit
 build
 .svelte-kit
+.vercel
 
 # Logs
 logs

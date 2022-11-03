@@ -3,7 +3,9 @@ Dockerfile
 *.dockerfile
 
 # SvelteKit
+build
 .svelte-kit
+.vercel
 
 # Logs
 logs
