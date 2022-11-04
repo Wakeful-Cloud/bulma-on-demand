@@ -12,7 +12,9 @@ Customize [Bulma](https://bulma.io) without installing anything
 ## Documentation
 
 ### Deployment
-Bulma On Demand can be deployed pretty much anywhere you can run [SvelteKit](https://kit.svelte.dev). However, environments that limit execution-time/request to under ~1 second (eg: Cloudflare Workers free tier) will not work.
+Bulma On Demand can be deployed pretty much anywhere you can run [SvelteKit](https://kit.svelte.dev).
+However, environments that limit execution-time/request to under ~1 second (eg: Cloudflare Workers
+free tier) will not work.
 
 #### Docker
 ```bash
