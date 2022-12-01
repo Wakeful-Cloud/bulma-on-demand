@@ -18,7 +18,7 @@
       "devDependencies": {
         "@octokit/types": "^8.0.0",
         "@sveltejs/adapter-cloudflare": "^1.0.0-next.40",
-        "@sveltejs/adapter-netlify": "^1.0.0-next.83",
+        "@sveltejs/adapter-netlify": "^1.0.0-next.84",
         "@sveltejs/adapter-node": "^1.0.0-next.100",
         "@sveltejs/adapter-vercel": "^1.0.0-next.81",
         "@sveltejs/kit": "^1.0.0-next.532",
@@ -380,9 +380,9 @@
       }
     },
     "node_modules/@sveltejs/adapter-netlify": {
-      "version": "1.0.0-next.83",
-      "resolved": "https://registry.npmjs.org/@sveltejs/adapter-netlify/-/adapter-netlify-1.0.0-next.83.tgz",
-      "integrity": "sha512-4hPKs7T1v81KatpMm8AgPEe4LSvoRNWiooxbSlLL8su/nnVe2FHPlpGgRcdSsE9VUmlkyd+4YIbVFG0ZcYO4LQ==",
+      "version": "1.0.0-next.84",
+      "resolved": "https://registry.npmjs.org/@sveltejs/adapter-netlify/-/adapter-netlify-1.0.0-next.84.tgz",
+      "integrity": "sha512-i4vf3to0sV/iI39UPPhlVjOP+jZCZ048M4oHkqDM1FfJwACwgXaysdF2t4X0DV3loLmrkfarwbatjbGIECA9uQ==",
       "dev": true,
       "dependencies": {
         "@iarna/toml": "^2.2.5",
@@ -4727,9 +4727,9 @@
       }
     },
     "@sveltejs/adapter-netlify": {
-      "version": "1.0.0-next.83",
-      "resolved": "https://registry.npmjs.org/@sveltejs/adapter-netlify/-/adapter-netlify-1.0.0-next.83.tgz",
-      "integrity": "sha512-4hPKs7T1v81KatpMm8AgPEe4LSvoRNWiooxbSlLL8su/nnVe2FHPlpGgRcdSsE9VUmlkyd+4YIbVFG0ZcYO4LQ==",
+      "version": "1.0.0-next.84",
+      "resolved": "https://registry.npmjs.org/@sveltejs/adapter-netlify/-/adapter-netlify-1.0.0-next.84.tgz",
+      "integrity": "sha512-i4vf3to0sV/iI39UPPhlVjOP+jZCZ048M4oHkqDM1FfJwACwgXaysdF2t4X0DV3loLmrkfarwbatjbGIECA9uQ==",
       "dev": true,
       "requires": {
         "@iarna/toml": "^2.2.5",
