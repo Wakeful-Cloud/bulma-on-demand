@@ -2,7 +2,7 @@
 ![Light logo](./logo/logo-light.png#gh-light-mode-only)
 
 ![CDN Status](https://img.shields.io/website?label=CDN%20Status&style=flat-square&url=https%3A%2F%2Fbulma-on-demand.vercel.app%2Fapi%2Fbulma.min.css)
-[![GitHub Continuous Deployment Status](https://img.shields.io/github/workflow/status/wakeful-cloud/bulma-on-demand/Continuous%20deployment?label=Deployment&style=flat-square)](https://github.com/wakeful-cloud/bulma-on-demand/actions/workflows/cd.yml)
+[![GitHub Continuous Deployment Status](https://img.shields.io/github/actions/workflow/status/wakeful-cloud/bulma-on-demand/cd.yml?label=Deployment&style=flat-square)](https://github.com/wakeful-cloud/bulma-on-demand/actions/workflows/cd.yml)
 [![Package.json Version](https://img.shields.io/github/package-json/v/wakeful-cloud/bulma-on-demand?label=Version&style=flat-square)](https://github.com/Wakeful-Cloud/bulma-on-demand/blob/main/package.json)
 
 Customize [Bulma](https://bulma.io) without installing anything
