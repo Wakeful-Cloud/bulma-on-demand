@@ -30,7 +30,7 @@
         "eslint-plugin-svelte3": "^4.0.0",
         "got": "^12.5.3",
         "jszip": "^3.10.1",
-        "lucide-svelte": "^0.109.0",
+        "lucide-svelte": "^0.118.0",
         "svelte": "^3.55.1",
         "svelte-check": "^3.0.3",
         "svelte-meta-tags": "^2.6.5",
@@ -2735,9 +2735,9 @@
       }
     },
     "node_modules/lucide-svelte": {
-      "version": "0.109.0",
-      "resolved": "https://registry.npmjs.org/lucide-svelte/-/lucide-svelte-0.109.0.tgz",
-      "integrity": "sha512-ScmxLv96uAQtWSuo3nApr0YTni14gfpb3AN8kosI7ZGTGYuH2yJFRsizDksMIwF1n9yPwHzNNKPnk+lnKWdMwg==",
+      "version": "0.118.0",
+      "resolved": "https://registry.npmjs.org/lucide-svelte/-/lucide-svelte-0.118.0.tgz",
+      "integrity": "sha512-MO5IN++5ZfSoTpdRXkmBnDLoaVIpSUjXU/nKReqYaie8ND0VBo3is2YBMl5eFva7XwLLzugmNhkwlWLhnZzQ6Q==",
       "dev": true,
       "peerDependencies": {
         "svelte": "^3.49.0"
