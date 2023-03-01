@@ -18,7 +18,7 @@
     "lru-cache": "^7.14.1",
     "node-object-hash": "^2.3.10",
     "sass-embedded": "^1.57.1",
-    "yup": "^1.0.0-beta.4"
+    "yup": "^1.0.2"
   },
   "devDependencies": {
     "@octokit/types": "^9.0.0",

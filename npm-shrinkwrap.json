@@ -13,7 +13,7 @@
         "lru-cache": "^7.14.1",
         "node-object-hash": "^2.3.10",
         "sass-embedded": "^1.57.1",
-        "yup": "^1.0.0-beta.4"
+        "yup": "^1.0.2"
       },
       "devDependencies": {
         "@octokit/types": "^9.0.0",
@@ -4469,9 +4469,9 @@
       }
     },
     "node_modules/yup": {
-      "version": "1.0.0-beta.8",
-      "resolved": "https://registry.npmjs.org/yup/-/yup-1.0.0-beta.8.tgz",
-      "integrity": "sha512-vczv/4dfMGp47A4cS633mrp6bLIIIFL113bSmnAWajKLXzRlEENNaTNRbQyr6iwlCincjvFAeYXwRsURq7vp+A==",
+      "version": "1.0.2",
+      "resolved": "https://registry.npmjs.org/yup/-/yup-1.0.2.tgz",
+      "integrity": "sha512-Lpi8nITFKjWtCoK3yQP8MUk78LJmHWqbFd0OOMXTar+yjejlQ4OIIoZgnTW1bnEUKDw6dZBcy3/IdXnt2KDUow==",
       "dependencies": {
         "property-expr": "^2.0.5",
         "tiny-case": "^1.0.3",
