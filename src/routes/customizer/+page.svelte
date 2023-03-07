@@ -1,10 +1,10 @@
 <script lang="ts">
   //Imports
   import getIntegrity from '$lib/integrity';
-  import {Check, Copy, ListPlus, LogIn, X} from 'lucide-svelte';
-  import {debounce} from 'lodash-es';
-  import {error} from '$lib/stores';
-  import {variables, versions, type Version} from '$lib/variables';
+  import { Check, Copy, ListPlus, LogIn, X } from 'lucide-svelte';
+  import { debounce } from 'lodash-es';
+  import { error } from '$lib/stores';
+  import { variables, versions, type Version } from '$lib/variables';
 
   //Types
   interface Variable {
@@ -27,8 +27,7 @@
   };
 
   //Reactive
-  $: 
-  {
+  $: {
     //Update the URL
     output.url = new URL(
       `/api/bulma-${input.version}.${input.minify ? 'min.' : ''}css`,
@@ -36,7 +35,7 @@
     );
     output.url.search = new URLSearchParams(
       Object.fromEntries(
-        input.variables.map(variable => [variable.name, variable.value])
+        input.variables.map((variable) => [variable.name, variable.value])
       )
     ).toString();
 
@@ -45,11 +44,9 @@
   }
 
   //Methods
-  const updateFromExisting = () => 
-  {
+  const updateFromExisting = () => {
     //Parse the existing URL
-    try 
-    {
+    try {
       const url = new URL(input.existing, 'https://dummy');
 
       //Parse the suffix
@@ -57,8 +54,7 @@
         url.pathname
       );
 
-      if (suffix == null || suffix.length != 3) 
-      {
+      if (suffix == null || suffix.length != 3) {
         throw new Error('Invalid CSS URL!');
       }
 
@@ -77,18 +73,15 @@
 
       //Clear
       input.existing = '';
-    }
-   catch (err) 
-    {
+    } catch (err) {
       error.show(err as string);
     }
   };
 
-  const onDragStart = (event: DragEvent) => 
-  {
+  const onDragStart = (event: DragEvent) => {
     //Get the dragged index
     const draggedIndex = input.variables.findIndex(
-      variable =>
+      (variable) =>
         variable.name == (event.target as HTMLElement)?.dataset?.variable
     );
 
@@ -99,8 +92,7 @@
     );
   };
 
-  const onDrop = (event: DragEvent) => 
-  {
+  const onDrop = (event: DragEvent) => {
     //Retrieve the dragged index
     const draggedIndex = JSON.parse(
       event.dataTransfer?.getData('application/json') ?? '-1'
@@ -109,34 +101,32 @@
     //Get the dropped index
     let droppedIndex = -1;
 
-    for (const candidate of event.composedPath()) 
-    {
+    for (const candidate of event.composedPath()) {
       //Get the index for the candidate
       const candidateIndex = input.variables.findIndex(
-        variable =>
+        (variable) =>
           variable.name == (candidate as HTMLElement)?.dataset?.variable
       );
 
       //If the candidate index isn't invalid, use it
-      if (candidateIndex != -1) 
-      {
+      if (candidateIndex != -1) {
         droppedIndex = candidateIndex;
       }
     }
 
-    if (draggedIndex < 0 || droppedIndex < 0) 
-    {
+    if (draggedIndex < 0 || droppedIndex < 0) {
       return;
     }
 
     //Get the dragged variable, filter it out, and insert it after the dropped variable
     const tempVariable = input.variables[draggedIndex]!;
-    input.variables = input.variables.filter(variable => variable != tempVariable);
+    input.variables = input.variables.filter(
+      (variable) => variable != tempVariable
+    );
     input.variables.splice(droppedIndex, 0, tempVariable);
   };
 
-  const addVariable = () => 
-  {
+  const addVariable = () => {
     input.variables = [
       ...input.variables,
       {
@@ -146,39 +136,32 @@
     ];
   };
 
-  const removeVariable = (index: number) => 
-  {
+  const removeVariable = (index: number) => {
     input.variables = input.variables.filter((_, i) => i != index);
   };
 
-  const updateSnippet = debounce(async () => 
-  {
+  const updateSnippet = debounce(async () => {
     //Show the progress bar
     output.snippet = undefined;
 
     //Skip if SSR
-    if (output.url.protocol.startsWith('invalid')) 
-    {
+    if (output.url.protocol.startsWith('invalid')) {
       return;
     }
 
-    try 
-    {
+    try {
       //Get the integrity
       const integrity = await getIntegrity(output.url);
 
       //Update the snippet and hide the progess bar
       output.snippet = `<link rel="stylesheet" href="${output.url.toString()}" integrity="${integrity}" crossorigin="anonymous">`;
-    }
-   catch (err) 
-    {
+    } catch (err) {
       error.show(err as string);
       return;
     }
   }, 1000);
 
-  const copySnippet = async () => 
-  {
+  const copySnippet = async () => {
     //Copy
     await navigator.clipboard.writeText(output.snippet ?? '');
 
@@ -229,7 +212,7 @@
         class="select"
         id="version"
         bind:value={input.version}
-        on:change={event => (input.version = event.target?.value)}
+        on:change={(event) => (input.version = event.target?.value)}
       >
         {#each versions as possibleVersion}
           <option>{possibleVersion}</option>
@@ -275,7 +258,7 @@
                 <select
                   class="select"
                   bind:value={variable.name}
-                  on:change={event => (variable.name = event.target?.value)}
+                  on:change={(event) => (variable.name = event.target?.value)}
                 >
                   {#each variables[input.version] as variableName}
                     <option>{variableName}</option>
@@ -366,6 +349,11 @@
     <a class="wrap" href={output.url.toString()} target="_blank" id="css-url"
       >{output.url.toString()}</a
     >
+    <p class="help">
+      Download this file and serve it for <a href="/about"
+        >maximum performance and reliabilitiy</a
+      >.
+    </p>
   </div>
 
   <!-- Snippet -->

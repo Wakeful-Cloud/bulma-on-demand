@@ -76,8 +76,7 @@
     Usually. Initial compilation is somewhat slow, but successive requests are
     much faster thanks to Bulma On Demand's in-memory cache and aggressive HTTP
     caching. You can see this for yourself because this website uses Bulma On
-    Demand's API. If you're concerned about performance, you can always just
-    download the output CSS file and serve it manually.
+    Demand's API.
   </p>
 
   <h2 class="is-size-4">Is Bulma On Demand secure?</h2>
@@ -88,6 +87,14 @@
       rel="noreferrer nofollow">subresource integrity hashes</a
     >
     to prevent tampering with the style sheets.
+  </p>
+
+  <h2 class="is-size-4">Is Bulma On Demand reliable?</h2>
+  <p class="is-size-5">
+    Ehh. It's a hobby project. If you're concerned about reliability
+    (or performance), you can always just download the output CSS file
+    and serve it manually. Make sure to save the download URL so it's
+    easy to make changes in the future.
   </p>
 
   <h2 class="is-size-4">Does Bulma On Demand support dark mode?</h2>
