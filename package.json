@@ -52,5 +52,8 @@
   "bugs": {
     "url": "https://github.com/Wakeful-Cloud/bulma-on-demand/issues"
   },
-  "homepage": "https://github.com/Wakeful-Cloud/bulma-on-demand#readme"
+  "homepage": "https://github.com/Wakeful-Cloud/bulma-on-demand#readme",
+  "volta": {
+    "node": "18.14.2"
+  }
 }

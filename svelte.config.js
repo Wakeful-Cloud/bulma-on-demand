@@ -20,16 +20,12 @@ const adapters = [
 	{
 		name: 'Netlify',
 		test: () => process.env.NETLIFY != null,
-		adapter: netlify({
-			split: true
-		}),
+		adapter: netlify(),
 	},
 	{
 		name: 'Vercel',
 		test: () => process.env.VERCEL != null,
-		adapter: vercel({
-			split: true
-		}),
+		adapter: vercel(),
 	}
 ];
 
